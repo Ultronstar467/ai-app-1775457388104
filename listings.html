@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Properties - RealEstateFlow</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <h1 class="logo"><a href="index.html">RealEstateFlow</a></h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="listings.html" class="active">Properties</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero bg-listings">
+            <div class="container">
+                <h2>Our Properties</h2>
+                <p>Browse through our extensive collection of homes, apartments, and commercial spaces.</p>
+            </div>
+        </section>
+
+        <section class="listings-section section-padding">
+            <div class="container">
+                <div class="listing-layout">
+                    <aside class="sidebar fade-in">
+                        <h3>Filter Properties</h3>
+                        <form id="filter-form">
+                            <div class="filter-group">
+                                <label for="location">Location</label>
+                                <input type="text" id="location" placeholder="e.g., Miami, New York">
+                            </div>
+                            <div class="filter-group">
+                                <label for="property-type">Property Type</label>
+                                <select id="property-type">
+                                    <option value="">Any</option>
+                                    <option value="house">House</option>
+                                    <option value="apartment">Apartment</option>
+                                    <option value="condo">Condo</option>
+                                    <option value="villa">Villa</option>
+                                    <option value="land">Land</option>
+                                </select>
+                            </div>
+                            <div class="filter-group">
+                                <label for="min-price">Min Price</label>
+                                <input type="number" id="min-price" placeholder="e.g., 100000">
+                            </div>
+                            <div class="filter-group">
+                                <label for="max-price">Max Price</label>
+                                <input type="number" id="max-price" placeholder="e.g., 1000000">
+                            </div>
+                            <div class="filter-group">
+                                <label for="bedrooms">Bedrooms</label>
+                                <select id="bedrooms">
+                                    <option value="">Any</option>
+                                    <option value="1">1+</option>
+                                    <option value="2">2+</option>
+                                    <option value="3">3+</option>
+                                    <option value="4">4+</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block mt-3">Apply Filters</button>
+                            <button type="reset" class="btn btn-secondary btn-block mt-2">Reset Filters</button>
+                        </form>
+                    </aside>
+
+                    <div class="main-listings-content">
+                        <div class="sort-options">
+                            <span>Showing <span id="property-count">12</span> properties</span>
+                            <select id="sort-by">
+                                <option value="default">Sort by: Default</option>
+                                <option value="price-asc">Price: Low to High</option>
+                                <option value="price-desc">Price: High to Low</option>
+                                <option value="date-new">Newest First</option>
+                            </select>
+                        </div>
+                        <div class="property-grid" id="property-listings">
+                            <!-- Property listings will be loaded here by JavaScript -->
+                            <!-- Example Property Card -->
+                            <div class="property-card fade-in" data-location="Miami" data-type="villa" data-price="1200000" data-beds="4" data-date="2023-10-20">
+                                <img src="https://via.placeholder.com/400x250/FFDDC1/808080?text=Modern+Villa+Miami" alt="Modern Villa in Miami">
+                                <div class="card-content">
+                                    <h3>Modern Villa with Pool</h3>
+                                    <p class="location"><i class="fas fa-map-marker-alt"></i> Miami, FL</p>
+                                    <p class="price">$1,200,000</p>
+                                    <div class="features">
+                                        <span><i class="fas fa-bed"></i> 4</span>
+                                        <span><i class="fas fa-bath"></i> 3</span>
+                                        <span><i class="fas fa-ruler-combined"></i> 2500 sqft</span>
+                                    </div>
+                                    <a href="property-details.html?id=1" class="btn btn-secondary">View Details</a>
+                                </div>
+                            </div>
+                            <div class="property-card fade-in" data-location="New York" data-type="apartment" data-price="850000" data-beds="2" data-date="2023-10-18">
+                                <img src="https://via.placeholder.com/400x250/CCE0FF/808080?text=Luxury+Apartment+NY" alt="Luxury Apartment Downtown">
+                                <div class="card-content">
+                                    <h3>Luxury Apartment Downtown</h3>
+                                    <p class="location"><i class="fas fa-map-marker-alt"></i> New York, NY</p>
+                                    <p class="price">$850,000</p>
+                                    <div class="features">
+                                        <span><i class="fas fa-bed"></i> 2</span>
+                                        <span><i class="fas fa-bath"></i> 2</span>
+                                        <span><i class="fas fa-ruler-combined"></i> 1200 sqft</span>
+                                    </div>
+                                    <a href="property-details.html?id=2" class="btn btn-secondary">View Details</a>
+                                </div>
+                            </div>
+                            <div class="property-card fade-in" data-location="Austin" data-type="house" data-price="550000" data-beds="3" data-date="2023-10-15">
+                                <img src="https://via.placeholder.com/400x250/D2F9D2/808080?text=Family+House+Austin" alt="Spacious Family House">
+                                <div class="card-content">
+                                    <h3>Spacious Family House</h3>
+                                    <p class="location"><i class="fas fa-map-marker-alt"></i> Austin, TX</p>
+                                    <p class="price">$550,000</p>
+                                    <div class="features">
+                                        <span><i class="fas fa-bed"></i> 3</span>
+                                        <span><i class="fas fa-bath"></i> 2</span>
+                                        <span><i class="fas fa-ruler-combined"></i> 1800 sqft</span>
+                                    </div>
+                                    <a href="property-details.html?id=3" class="btn btn-secondary">View Details</a>
+                                </div>
+                            </div>
+                             <div class="property-card fade-in" data-location="Los Angeles" data-type="condo" data-price="720000" data-beds="2" data-date="2023-10-10">
+                                <img src="https://via.placeholder.com/400x250/FFDDC1/808080?text=Beachfront+Condo" alt="Beachfront Condo">
+                                <div class="card-content">
+                                    <h3>Beachfront Condo</h3>
+                                    <p class="location"><i class="fas fa-map-marker-alt"></i> Los Angeles, CA</p>
+                                    <p class="price">$720,000</p>
+                                    <div class="features">
+                                        <span><i class="fas fa-bed"></i> 2</span>
+                                        <span><i class="fas fa-bath"></i> 2</span>
+                                        <span><i class="fas fa-ruler-combined"></i> 1100 sqft</span>
+                                    </div>
+                                    <a href="property-details.html?id=4" class="btn btn-secondary">View Details</a>
+                                </div>
+                            </div>
+                            <div class="property-card fade-in" data-location="Seattle" data-type="house" data-price="980000" data-beds="4" data-date="2023-10-05">
+                                <img src="https://via.placeholder.com/400x250/CCE0FF/808080?text=Modern+Family+Home" alt="Modern Family Home">
+                                <div class="card-content">
+                                    <h3>Modern Family Home</h3>
+                                    <p class="location"><i class="fas fa-map-marker-alt"></i> Seattle, WA</p>
+                                    <p class="price">$980,000</p>
+                                    <div class="features">
+                                        <span><i class="fas fa-bed"></i> 4</span>
+                                        <span><i class="fas fa-bath"></i> 3.5</span>
+                                        <span><i class="fas fa-ruler-combined"></i> 2800 sqft</span>
+                                    </div>
+                                    <a href="property-details.html?id=5" class="btn btn-secondary">View Details</a>
+                                </div>
+                            </div>
+                            <div class="property-card fade-in" data-location="Chicago" data-type="apartment" data-price="420000" data-beds="1" data-date="2023-09-28">
+                                <img src="https://via.placeholder.com/400x250/D2F9D2/808080?text=Studio+Apartment" alt="Studio Apartment">
+                                <div class="card-content">
+                                    <h3>Cozy Studio Apartment</h3>
+                                    <p class="location"><i class="fas fa-map-marker-alt"></i> Chicago, IL</p>
+                                    <p class="price">$420,000</p>
+                                    <div class="features">
+                                        <span><i class="fas fa-bed"></i> 1</span>
+                                        <span><i class="fas fa-bath"></i> 1</span>
+                                        <span><i class="fas fa-ruler-combined"></i> 650 sqft</span>
+                                    </div>
+                                    <a href="property-details.html?id=6" class="btn btn-secondary">View Details</a>
+                                </div>
+                            </div>
+                            <div class="property-card fade-in" data-location="Miami" data-type="villa" data-price="1500000" data-beds="5" data-date="2023-09-25">
+                                <img src="https://via.placeholder.com/400x250/FFDDC1/808080?text=Luxury+Waterfront+Villa" alt="Luxury Waterfront Villa">
+                                <div class="card-content">
+                                    <h3>Luxury Waterfront Villa</h3>
+                                    <p class="location"><i class="fas fa-map-marker-alt"></i> Miami, FL</p>
+                                    <p class="price">$1,500,000</p>
+                                    <div class="features">
+                                        <span><i class="fas fa-bed"></i> 5</span>
+                                        <span><i class="fas fa-bath"></i> 4</span>
+                                        <span><i class="fas fa-ruler-combined"></i> 3500 sqft</span>
+                                    </div>
+                                    <a href="property-details.html?id=7" class="btn btn-secondary">View Details</a>
+                                </div>
+                            </div>
+                            <div class="property-card fade-in" data-location="New York" data-type="condo" data-price="600000" data-beds="2" data-date="2023-09-20">
+                                <img src="https://via.placeholder.com/400x250/CCE0FF/808080?text=Urban+Condo" alt="Urban Condo">
+                                <div class="card-content">
+                                    <h3>Modern Urban Condo</h3>
+                                    <p class="location"><i class="fas fa-map-marker-alt"></i> New York, NY</p>
+                                    <p class="price">$600,000</p>
+                                    <div class="features">
+                                        <span><i class="fas fa-bed"></i> 2</span>
+                                        <span><i class="fas fa-bath"></i> 1.5</span>
+                                        <span><i class="fas fa-ruler-combined"></i> 900 sqft</span>
+                                    </div>
+                                    <a href="property-details.html?id=8" class="btn btn-secondary">View Details</a>
+                                </div>
+                            </div>
+                            <div class="property-card fade-in" data-location="Austin" data-type="house" data-price="750000" data-beds="4" data-date="2023-09-15">
+                                <img src="https://via.placeholder.com/400x250/D2F9D2/808080?text=Suburban+Home" alt="Suburban Home">
+                                <div class="card-content">
+                                    <h3>Charming Suburban Home</h3>
+                                    <p class="location"><i class="fas fa-map-marker-alt"></i> Austin, TX</p>
+                                    <p class="price">$750,000</p>
+                                    <div class="features">
+                                        <span><i class="fas fa-bed"></i> 4</span>
+                                        <span><i class="fas fa-bath"></i> 2.5</span>
+                                        <span><i class="fas fa-ruler-combined"></i> 2200 sqft</span>
+                                    </div>
+                                    <a href="property-details.html?id=9" class="btn btn-secondary">View Details</a>
+                                </div>
+                            </div>
+                            <div class="property-card fade-in" data-location="Los Angeles" data-type="apartment" data-price="950000" data-beds="3" data-date="2023-09-10">
+                                <img src="https://via.placeholder.com/400x250/FFDDC1/808080?text=Penthouse+LA" alt="Penthouse Apartment">
+                                <div class="card-content">
+                                    <h3>Penthouse Apartment</h3>
+                                    <p class="location"><i class="fas fa-map-marker-alt"></i> Los Angeles, CA</p>
+                                    <p class="price">$950,000</p>
+                                    <div class="features">
+                                        <span><i class="fas fa-bed"></i> 3</span>
+                                        <span><i class="fas fa-bath"></i> 3</span>
+                                        <span><i class="fas fa-ruler-combined"></i> 1800 sqft</span>
+                                    </div>
+                                    <a href="property-details.html?id=10" class="btn btn-secondary">View Details</a>
+                                </div>
+                            </div>
+                            <div class="property-card fade-in" data-location="Seattle" data-type="land" data-price="300000" data-beds="0" data-date="2023-09-05">
+                                <img src="https://via.placeholder.com/400x250/CCE0FF/808080?text=Vacant+Land" alt="Vacant Land">
+                                <div class="card-content">
+                                    <h3>Prime Development Land</h3>
+                                    <p class="location"><i class="fas fa-map-marker-alt"></i> Seattle, WA</p>
+                                    <p class="price">$300,000</p>
+                                    <div class="features">
+                                        <span><i class="fas fa-bed"></i> N/A</span>
+                                        <span><i class="fas fa-bath"></i> N/A</span>
+                                        <span><i class="fas fa-ruler-combined"></i> 1 acre</span>
+                                    </div>
+                                    <a href="property-details.html?id=11" class="btn btn-secondary">View Details</a>
+                                </div>
+                            </div>
+                            <div class="property-card fade-in" data-location="Chicago" data-type="house" data-price="680000" data-beds="3" data-date="2023-09-01">
+                                <img src="https://via.placeholder.com/400x250/D2F9D2/808080?text=Victorian+House" alt="Victorian House">
+                                <div class="card-content">
+                                    <h3>Historic Victorian House</h3>
+                                    <p class="location"><i class="fas fa-map-marker-alt"></i> Chicago, IL</p>
+                                    <p class="price">$680,000</p>
+                                    <div class="features">
+                                        <span><i class="fas fa-bed"></i> 3</span>
+                                        <span><i class="fas fa-bath"></i> 2.5</span>
+                                        <span><i class="fas fa-ruler-combined"></i> 2000 sqft</span>
+                                    </div>
+                                    <a href="property-details.html?id=12" class="btn btn-secondary">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center mt-4">
+                            <button id="load-more-btn" class="btn btn-primary">Load More Properties</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col about-col">
+                    <h3>RealEstateFlow</h3>
+                    <p>Your trusted partner in finding your next home. We connect buyers and sellers with ease and transparency.</p>
+                </div>
+                <div class="footer-col nav-links-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="listings.html">Properties</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col contact-info-col">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Dream Home St, City, Country</p>
+                    <p><i class="fas fa-phone"></i> +1 (123) 456-7890</p>
+                    <p><i class="fas fa-envelope"></i> info@realestateflow.com</p>
+                </div>
+                <div class="footer-col social-col">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 RealEstateFlow. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/listings.js"></script>
+</body>
+</html>
