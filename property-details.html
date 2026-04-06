@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Details - RealEstateFlow</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <h1 class="logo"><a href="index.html">RealEstateFlow</a></h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="listings.html">Properties</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="property-details-section section-padding">
+            <div class="container">
+                <div class="property-header">
+                    <h2 id="property-title">Modern Villa with Pool in Miami</h2>
+                    <p class="location"><i class="fas fa-map-marker-alt"></i> 123 Ocean Drive, Miami, FL 33139</p>
+                    <p class="price">$1,200,000</p>
+                </div>
+
+                <div class="property-gallery">
+                    <div class="gallery-main-image">
+                        <img src="https://via.placeholder.com/800x500/FFDDC1/808080?text=Main+Villa+Image" alt="Property main image" id="main-property-image">
+                    </div>
+                    <div class="gallery-thumbnails">
+                        <img src="https://via.placeholder.com/150x100/FFDDC1/808080?text=Image+1" alt="Thumbnail 1" class="thumbnail active" data-full-src="https://via.placeholder.com/800x500/FFDDC1/808080?text=Main+Villa+Image">
+                        <img src="https://via.placeholder.com/150x100/CCE0FF/808080?text=Image+2" alt="Thumbnail 2" class="thumbnail" data-full-src="https://via.placeholder.com/800x500/CCE0FF/808080?text=Villa+Living+Room">
+                        <img src="https://via.placeholder.com/150x100/D2F9D2/808080?text=Image+3" alt="Thumbnail 3" class="thumbnail" data-full-src="https://via.placeholder.com/800x500/D2F9D2/808080?text=Villa+Kitchen">
+                        <img src="https://via.placeholder.com/150x100/FFDDC1/808080?text=Image+4" alt="Thumbnail 4" class="thumbnail" data-full-src="https://via.placeholder.com/800x500/FFDDC1/808080?text=Villa+Bedroom">
+                        <img src="https://via.placeholder.com/150x100/CCE0FF/808080?text=Image+5" alt="Thumbnail 5" class="thumbnail" data-full-src="https://via.placeholder.com/800x500/CCE0FF/808080?text=Villa+Pool">
+                    </div>
+                </div>
+
+                <div class="property-content-layout">
+                    <div class="property-description-amenities">
+                        <h3>Description</h3>
+                        <p id="property-description">
+                            Experience luxury living in this stunning modern villa located in the heart of Miami.
+                            Boasting 4 spacious bedrooms, 3 luxurious bathrooms, and an expansive open-concept
+                            living area, this home is perfect for entertaining and family life. Enjoy the beautiful
+                            Florida weather in your private backyard oasis featuring a sparkling swimming pool,
+                            lush landscaping, and a covered patio for al fresco dining.
+                        </p>
+                        <p>
+                            High ceilings, designer finishes, and state-of-the-art appliances are just a few of the
+                            features that make this property truly exceptional. Conveniently located near top-rated
+                            schools, pristine beaches, and vibrant dining and shopping destinations. Don't miss
+                            this opportunity to own a piece of paradise!
+                        </p>
+
+                        <h3>Key Features & Amenities</h3>
+                        <ul class="amenities-list">
+                            <li><i class="fas fa-bed"></i> 4 Bedrooms</li>
+                            <li><i class="fas fa-bath"></i> 3 Bathrooms</li>
+                            <li><i class="fas fa-ruler-combined"></i> 2500 Sqft</li>
+                            <li><i class="fas fa-car"></i> 2 Car Garage</li>
+                            <li><i class="fas fa-water"></i> Private Pool</li>
+                            <li><i class="fas fa-leaf"></i> Lush Garden</li>
+                            <li><i class="fas fa-kitchen-set"></i> Modern Kitchen</li>
+                            <li><i class="fas fa-door-open"></i> Open Concept Layout</li>
+                            <li><i class="fas fa-snowflake"></i> Central AC</li>
+                            <li><i class="fas fa-shield-alt"></i> Security System</li>
+                        </ul>
+
+                        <h3>Location</h3>
+                        <div class="map-placeholder">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3593.42550186591!2d-80.1384074239276!3d25.75704170889982!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b4b08c90ad73%3A0xc3924f0c43666b6e!2sOcean%20Dr%2C%20Miami%20Beach%2C%20FL%2033139!5e0!3m2!1sen!2sus!4v1701041680105!5m2!1sen!2sus" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+
+                    <aside class="agent-contact-form fade-in">
+                        <h3>Contact Agent</h3>
+                        <img src="https://via.placeholder.com/100x100/FFDDC1/808080?text=Agent" alt="Agent Photo" class="agent-photo">
+                        <p class="agent-name">Sarah Johnson</p>
+                        <p class="agent-title">Lead Real Estate Agent</p>
+                        <form id="contact-agent-form">
+                            <div class="form-group">
+                                <label for="contact-name">Your Name</label>
+                                <input type="text" id="contact-name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-email">Your Email</label>
+                                <input type="email" id="contact-email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-phone">Your Phone (Optional)</label>
+                                <input type="tel" id="contact-phone" name="phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-message">Message</label>
+                                <textarea id="contact-message" name="message" rows="5" placeholder="I'm interested in this property and would like to schedule a viewing." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+                            <a href="tel:+11234567890" class="btn btn-secondary btn-block mt-2"><i class="fas fa-phone"></i> Call Agent</a>
+                        </form>
+                    </aside>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col about-col">
+                    <h3>RealEstateFlow</h3>
+                    <p>Your trusted partner in finding your next home. We connect buyers and sellers with ease and transparency.</p>
+                </div>
+                <div class="footer-col nav-links-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="listings.html">Properties</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col contact-info-col">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Dream Home St, City, Country</p>
+                    <p><i class="fas fa-phone"></i> +1 (123) 456-7890</p>
+                    <p><i class="fas fa-envelope"></i> info@realestateflow.com</p>
+                </div>
+                <div class="footer-col social-col">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 RealEstateFlow. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/property-details.js"></script>
+</body>
+</html>
